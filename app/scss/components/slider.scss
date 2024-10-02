@@ -1,5 +1,6 @@
 .slider-container {
     height: 100vh;
+    box-shadow: 0 0 5px rgba(49, 49, 49, 0.44);
 }
 .slide {
     height: 100vh;
@@ -92,4 +93,13 @@
     font-size: 16px;
     text-align: center;
     padding-bottom: 5px;
+}
+
+#photo-reviews-slider {
+    padding: 10px 0;
+    overflow: hidden;
+}
+
+#photo-reviews-slider div {
+    overflow: visible;
 }

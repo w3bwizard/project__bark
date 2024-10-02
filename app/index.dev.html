@@ -16,6 +16,19 @@
     <main>
         <section class="section">
             <div class="container">
+                <nav aria-label="breadcrumb">
+                    <div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+                        <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                            <a itemprop="item" href="/">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                                    <path d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"/>
+                                </svg>
+                                <span itemprop="name">Меблі на замовлення</span>
+                            </a>
+                            <meta itemprop="position" content="1" />
+                        </span>
+                    </div>
+                </nav>
                 <h1 class="section__title">Гарні та якісні меблі на замовлення від нашої студії</h1>
                 <div class="category">
                     <div class="category__card">
@@ -107,7 +120,13 @@
                 <div class="reviews__inner">
                     <div id="photo-reviews-slider">
                         <div>
-                            <div class="reviews__item" >
+                            <div class="reviews__item">
+                                <div class="reviews__image">
+                                    <a href="/" class="reviews__link">
+                                        <div class="reviews__title">Название метериала</div>
+                                        <img src="./images/krovat.webp" alt="" class="reviews__img">
+                                    </a>
+                                </div>
                                 <div class="reviews__content">
                                     <p class="reviews__text">“Завдяки довершеним та технологічним продуктам та послугам, талановитим співробітникам і серйозному підходу до новаторства та неперервної інтеграції, а також співпраці з іноземними компаніями та замовниками, підприємство відкриває перед Україною нові оригінальні рішення.”</p>
                                     <div class="reviews__bottom">
@@ -125,6 +144,12 @@
                         </div>
                         <div>
                             <div class="reviews__item" >
+                                <div class="reviews__image">
+                                    <a href="/" class="reviews__link">
+                                        <div class="reviews__title">Название метериала</div>
+                                        <img src="./images/mebel-v-vannuyu.webp" alt="" class="reviews__img">
+                                    </a>
+                                </div>                                
                                 <div class="reviews__content">
                                     <p class="reviews__text">“Ми впевнені, що впровадження відкриттів (оптимізація сервісу) життєво необхідне для розвитку, тому ми постійно працюємо над поліпшенням та разом з тим, відкриті до бізнесу. Систематичне поліпшення, відкритість дружньої команди, управлінська вправність та збільшення рівня капіталізації забезпечили організації успіх і провідну роль на світовому ринку. ”</p>
                                     <div class="reviews__bottom">
@@ -192,13 +217,13 @@
                 </div>         
             </div>  
         </section>
-        <section class="section section--gray">
+        <section class="section section--beige">
             <div class="container">
                 <h1 class="section__title">Як нас знайти?</h1>
                 <div class="map">
                     <a href="/" class="map__link center">
                         <img src="/images/map.webp" alt="" class="map__img">
-                        <div class="map__title">Ми тут</div>
+                        <div class="map__title">Ми на карті</div>
                     </a>
                     <p class="map__text">
                         Гей, друже-шукачу диванів та шаф! Щоб знайти меблеву фірму в нашому славетному Києві, 

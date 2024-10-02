@@ -196,10 +196,14 @@ main {
 
 .section {
     padding: 30px 0;
+    padding-top: 0;
 }
 
-.section--gray {
+.section--beige {
     background-color: $k-beige;
+    box-shadow: 0 0 5px rgba(49,49,49,.15);
+    padding-top: 30px;
+    margin-top: 15px;
 }
 
 .section__title {
@@ -217,6 +221,27 @@ main {
     height: 3px;
     background-color: #555;
     margin: 5px auto;
+}
+
+/* breadcrumbs */ 
+.breadcrumb {
+
+    padding-bottom: 30px;
+    font-family: Montserrat,sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+.breadcrumb a {
+    text-decoration: none;
+    color: #030303;
+}
+.breadcrumb svg {
+    width: 20px;
+    height: 20px;
+    vertical-align: top;
+    margin-right: 5px;
+    fill: #030303;
 }
 
 /* category */ 
@@ -292,26 +317,59 @@ main {
     position: relative;
     width: 100%;
     max-width: 1200px;
-    padding: 0 15px;
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background-color: $k-beige;
+    box-shadow: 0 0 5px rgba(49, 49, 49, 0.15);
 }
 
-.reviews__icon {
+.reviews__image {
+    background-color: $k-vio;
+}
+
+.reviews__image:hover .reviews__link {
+    transform: translate3d(-10px, -10px, 0);
+}
+
+.reviews__image:hover .reviews__title {
+    width: 94%;
+}
+
+.reviews__link {
     display: block;
-    margin-right: 60px;
+    position: relative;
+    transition: transform .1s linear,-webkit-transform .1s linear;
+}
+
+.reviews__title {
+    position: absolute;
+    width: 70%;
+    font-family: Montserrat,sans-serif;
+    padding: 10px 0;
+    font-weight: 300;
+    font-size: 16px;
+    text-align: center;
+    top: 10px;
+    left: 50%;
+    z-index: 5;
+    transform: translate3d(-50%, 0, 0);
+    text-transform: uppercase;
+    background-color: #fff8f3;
+    color: #424242;
+    box-shadow: 0 0 5px rgba(49,49,49,.44);
+    transition: width .2s ease;
 }
 
 .reviews__content {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-content: center;
     width: 100%;
-    background-color: $k-beige;
-    padding: 15px;
+    height: 240px;
+    padding: 0 15px;
     border-radius: 15px;
 }
 
@@ -450,7 +508,7 @@ main {
 
 .map__img {
     opacity: .5;
-    height: 320px;
+    height: 260px;
     width: 1170px;
     transition: opacity .3s ease;
 }
@@ -458,31 +516,34 @@ main {
 .map__link {
     position: relative;
     background-color: #979797;
+    transition: background-color .2s ease;
+    &:hover {
+        background-color: $k-vio;
+    }
     &:hover .map__img{
-        opacity: .8;
+        opacity: .7;
     }
     &:hover .map__title{
-        color: $primary-color;
-    }
-    &:hover .map__title::before{
-        background-color: $primary-color;
-    }
-    &:hover .map__title::after{
-        background-color: $primary-color;
-    }    
+        padding: 10px 80px;
+    } 
 }
 
 .map__title {
-    font-family: Iceland, sans-serif;
-    font-size: 40px;
+    font-family: Montserrat,sans-serif;
+    padding: 10px 30px;
+    font-weight: 300;
+    font-size: 22px;
+    min-width: 250px;
+    text-align: center;
+    color: $text-color;
     text-transform: uppercase;
-    color: $red-color;
-    transition: color .3s ease;
-    font-weight: bolder;
+    background-color: $k-beige;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    transition: padding .2s ease;
+    box-shadow: 0 0 5px rgba(49,49,49,.44);
     &::before {
         content: "";
         display: inline-block;
@@ -491,21 +552,27 @@ main {
         mask-size: contain;
         width: 40px;
         height: 40px;
-        background-color: $red-color; /* Здесь мы задаем цвет в HEX формате */
+        background-color: $k-beige; /* Здесь мы задаем цвет в HEX формате */
         transition: background-color .3s ease;
         position: absolute;
-        top: -40px;
+        top: -55px;
         left: 50%;
-        transform: translate(-50%, 0);          
+        transform: translate(-50%, 0);  
+        filter: drop-shadow(0 0 5px rgba(49, 49, 49, .44));        
     }
     &::after {
         content: "";
         display: block;
-        width: 60px;
+        width: 120px;
         height: 4px;
-        background-color: $red-color;
+        background-color: $k-beige;;
         transition: background-color .3s ease;
-        margin: 5px auto 0;      
+        margin: 5px auto 0;
+        position: absolute;
+        bottom: -25px;
+        left: 50%;
+        transform: translate(-50%, 0);  
+        box-shadow: 0 0 5px rgba(49,49,49,.44);              
     }
 }
 
