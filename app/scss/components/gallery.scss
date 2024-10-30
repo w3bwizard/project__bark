@@ -1,0 +1,41 @@
+.gallery-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.main-image {
+    width: 100%;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.main-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.thumbnails {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+}
+
+.thumbnail {
+    cursor: pointer;
+}
+
+.thumbnail img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.pswp__counter {
+    color: #fff;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    z-index: 1;
+}
