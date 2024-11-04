@@ -18,7 +18,7 @@ const changed = require('gulp-changed');
 function images() {
     return src('app/images/accomodate/**/*.*')
         .pipe(newer('app/images'))
-        .pipe(webp())
+        .pipe(webp({quality: 90}))
         .pipe(dest('app/images'))
 }
 

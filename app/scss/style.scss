@@ -253,6 +253,10 @@ main {
 }
 
 .slide__button {
+    position: absolute;
+    bottom: 20%;
+    right: 0;
+    z-index: 999999;
     display: inline-block;
     font-family: Montserrat, sans-serif;
     font-weight: 100;
@@ -261,7 +265,7 @@ main {
     text-align: center;
     font-size: 18px;
     padding: 20px 0;
-    width: 240px;
+    width: 23%;
     margin: 0 auto;
     margin-top: 90px;
     background-color: #cef4bb;
