@@ -149,3 +149,16 @@ let sections = $('.section');
         nav.toggleClass('active');
         button.toggleClass('active');
     }
+
+    $(document).ready(function() {
+        var $fotorama = $('.fotorama').fotorama();
+        var fotorama = $fotorama.data('fotorama');
+    
+        // Добавляем зум на активное изображение
+        $fotorama.on('fotorama:show', function() {
+            $('.fotorama__stage__frame.fotorama__active').zoom({
+                url: $(this).attr('href'),
+                magnify: 2 // Уровень увеличения
+            });
+        });
+    });

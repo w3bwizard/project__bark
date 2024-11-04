@@ -26,8 +26,12 @@ main {
     position: fixed;
 }
 
+.header--static {
+    position: fixed;
+}
+
 .header__background {
-    background-color: $rgba-vio;
+    background-color: $k-vio;
     height: 88px;
 }
 
@@ -851,6 +855,22 @@ main {
     margin-top: 30px;
     padding-bottom: 30px;
     color: #424242;
+}
+
+.youtube-video {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* Соотношение сторон 16:9 */
+    height: 0;
+    overflow: hidden;
+}
+
+.youtube-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 @import './components/media.scss';

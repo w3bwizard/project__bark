@@ -32,7 +32,7 @@
                         </span>
                     </div>
                 </nav>                 
-                <h1 class="section__title">Пряма кухня Графіт та Гамільтон</h1>       
+                <h1 class="section__title">Шкаф купе Графіт та Гамільтон</h1>       
                 <div class="mat">
                     <div class="mat__gallery">
                         <h2>Фото кухні</h2>
@@ -129,19 +129,6 @@
     </main>    
     <!--=include footer.html --> 
     <script src="./js/main.min.js"></script> 
-    <script>
-        $(document).ready(function() {
-            var $fotorama = $('.fotorama').fotorama();
-            var fotorama = $fotorama.data('fotorama');
-        
-            // Добавляем зум на активное изображение
-            $fotorama.on('fotorama:show', function() {
-                $('.fotorama__stage__frame.fotorama__active').zoom({
-                    url: $(this).attr('href'),
-                    magnify: 2 // Уровень увеличения
-                });
-            });
-        });
-        </script>      
+     
 </body>
 </html>
