@@ -101,7 +101,7 @@ var header = $('header'),
     sliderH = $('#topslider').innerHeight();
     scrollOffset = $(this).scrollTop();
 
-    if (scrollOffset >= (sliderH - sliderH * 0.4)) {
+    if (scrollOffset >= (sliderH - sliderH * 0.25)) {
         header.addClass('header--fixed');    
     } else {
         header.removeClass('header--fixed');
@@ -110,7 +110,7 @@ var header = $('header'),
     $(window).on('scroll', function() {
         scrollOffset = $(this).scrollTop();
 
-        if (scrollOffset >= (sliderH - sliderH * 0.4)) {
+        if (scrollOffset >= (sliderH - sliderH * 0.25)) {
             header.addClass('header--fixed');    
         } else {
             header.removeClass('header--fixed');

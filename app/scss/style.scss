@@ -31,7 +31,7 @@ main {
 }
 
 .header__background {
-    background-color: $k-vio;
+    background-color: $k-beige;
     height: 88px;
 }
 
@@ -84,7 +84,7 @@ main {
     font-size: 55px;
     color: #3e3e3e;
     text-decoration: none;
-    background-color: $k-beige;
+    background-color: $k-vio;
     box-shadow: 0 0 5px rgba(49, 49, 49, 0.44);
     &::before, &::after {
         content: '';
@@ -173,7 +173,7 @@ main {
     justify-content: flefx-end;
     align-items: stretch;
     height: 58px;
-    background-color: $k-beige;
+    background-color: $k-vio;
     margin-top: 10px;
     padding: 0 10px;
     box-shadow: 0 0 5px rgba(49, 49, 49, 0.44);
@@ -264,16 +264,39 @@ main {
     text-transform: uppercase;
     text-align: center;
     font-size: 18px;
-    padding: 20px 0;
+    padding: 25px 0;    
     width: 23%;
     margin: 0 auto;
     margin-top: 90px;
-    background-color: #cef4bb;
+    background-color: $k-vio;
     color: #030303;
     box-shadow: 0 0 5px rgba(49,49,49,.44);
     transition: background-color .3s ease;
-    &:hover {
-       background-color: $k-vio;
+    &::before, &::after {
+        content: '';
+        position: absolute;
+        width: 248px;
+        height: 25px;
+        border: 1px solid #3e3e3e;
+        transition: height .2s ease;
+    }
+    &::before {
+        top: 10px;
+        left: 10px;
+        border-bottom: none;
+        border-right: none; 
+        
+    }
+    &::after {
+        bottom: 10px;
+        left: 10px;
+        border-top: none; 
+        border-left: none;      
+    }
+    &:hover{
+        &::before, &::after {
+            height: 57px;
+        }
     }
 }
 
@@ -407,7 +430,7 @@ main {
     z-index: 2;
     transform: translate3d(-50%, 0, 0);
     text-transform: uppercase;
-    background-color: $k-beige;
+    background-color: $k-vio;
     color: $k-text-light;
     box-shadow: 0 0 5px rgba(49,49,49,.44);
     transition: width .2s ease;
