@@ -83,8 +83,11 @@
     }
 
     .header__background {
-        background-color: rgb(229,217,245);
         height: 66px;
+    }
+
+    .header__menu {
+        background-color: $k-beige;
     }
 
     .header__inner {
@@ -253,11 +256,16 @@
         min-height: 540px;
     }
     .custom-nav {
-        top: 85vh;
+        top: 87vh;
         gap: 2%;
     }
     .nav-text {
-        font-size: 11px;
+        font-size: 10px;
+        margin-left: 2px;
+    }
+    .nav-item {
+        background: none;
+        text-align: center;
     }
     .category {
         row-gap: 9px;
@@ -292,6 +300,13 @@
     .reviews__autor::before {
         display: none;
     }  
+    .slide__button {
+        left: 50%;
+        transform: translateX(-50%);
+        &::before, &::after {
+            display: none;
+        }
+    }
 
 }
 

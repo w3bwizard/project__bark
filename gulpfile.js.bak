@@ -1,4 +1,5 @@
 const {src, dest, watch, parallel, series} = require('gulp');
+
 const scss = require('gulp-sass')(require('sass'));
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify-es').default;
@@ -12,6 +13,7 @@ const rigger = require('gulp-rigger');
 const rename = require('gulp-rename');
 const htmlmin = require('gulp-htmlmin');
 const changed = require('gulp-changed');
+
 
 function images() {
     return src('app/images/accomodate/**/*.*')
@@ -42,26 +44,25 @@ function pages() {
 }
 
 function styles() {
-    return src(['app/css/libs/*.css', 'app/scss/*.scss'])
+    return src('app/scss/*.scss')
         .pipe(autoprefixer({overrideBrowserslist: ['last 10 version']}))
         .pipe(rename({
             suffix: ".min",
             extname: ".css"
         }))
         .pipe(scss({outputStyle: 'compressed'}))
-        .pipe(concat('all.min.css'))
         .pipe(dest('app/css'))
         .pipe(browserSync.stream())
 }
 
 function scripts() {
-    return src([
-        'app/js/libs/**/*.js', // Включаем все файлы из папки libs
-        'app/js/accomodate/**/*.js' // Затем добавляем файлы из accomodate (включая main.js)
-        ])
+    return src('app/js/accomodate/**/*.js')
         .pipe(rigger())
-        .pipe(concat('all.min.js')) // Объединение всех файлов в один
         .pipe(uglify())
+        .pipe(rename({
+            suffix: ".min",
+            extname: ".js"
+        }))
         .pipe(dest('app/js'))
         .pipe(browserSync.stream());
 }
@@ -93,6 +94,7 @@ function building() {
     ], {base : 'app'})
         .pipe(dest('dist'))
 }
+
 
 exports.styles = styles;
 exports.images = images;
