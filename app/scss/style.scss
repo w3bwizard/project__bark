@@ -719,14 +719,65 @@ main {
     margin-top: 30px;    
 }
 
+/* gallery splidejs start*/ 
+.gallery-container {
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.thumbnail-slider {
+    margin-top: 20px;
+}
+
+.thumbnail {
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.3s;
+}
+
+.thumbnail.is-active {
+    opacity: 1;
+}
+
+.splide__slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#main-slider {
+    margin-bottom: 1rem;
+}
+
+#thumbnail-slider .splide__slide {
+    opacity: 0.6;
+}
+
+#thumbnail-slider .splide__slide.is-active {
+    opacity: 1;
+}
+
+/* gallery splidejs end*/ 
 /* mat page */ 
 
 .mat {
-    display: flex;    
+    display: flex;
+    overflow: hidden;   
+}
+.mat__leftside {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 50%;
+    padding: 0 15px;
 }
 
 .mat__gallery {
-    flex: 0 0 50%;
+    width: auto;
+}
+
+.mat__article {
+    flex: 1 1 50%;
+    padding: 0 15px;
 }
 
 .mat__video {
@@ -741,10 +792,7 @@ main {
     padding-bottom: 15px;
 }
 
-.mat__article {
-    flex: 1 1 50%;
-    padding: 0 15px;
-}
+
 
 .mat__materials {
     list-style: none;
@@ -766,7 +814,7 @@ main {
 
 .review {
     margin-top: 30px;
-    padding-bottom: 15px;
+    padding: 15px;
 }
 
 .reivew__inner {
@@ -785,6 +833,8 @@ main {
 .review_rating {
     margin-top: 15px;
 }
+
+
 /* mat page end */ 
 
 /* footer */ 

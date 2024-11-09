@@ -162,3 +162,35 @@ let sections = $('.section');
             });
         });
     });
+
+    var main = new Splide('#main-slider', {
+        type: 'fade',
+        rewind: true,
+        pagination: false,
+        arrows: true
+    });
+
+    // Инициализация слайдера с миниатюрами
+    var thumbnails = new Splide('#thumbnail-slider', {
+        fixedWidth: 100,
+        fixedHeight: 60,
+        gap: 10,
+        rewind: true,
+        pagination: false,
+        focus: 'center',
+        isNavigation: true,
+        arrows: true,
+        breakpoints: {
+            600: {
+                fixedWidth: 60,
+                fixedHeight: 44,
+            }
+        }
+    });
+
+    // Синхронизация слайдеров
+    main.sync(thumbnails);
+    
+    // Запуск обоих слайдеров
+    main.mount();
+    thumbnails.mount();

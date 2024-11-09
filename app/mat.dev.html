@@ -5,14 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Материал</title>
-    <script src="js/libs/jquery-3.7.1.min.js"></script>
-    <script src="js/libs/slick.min.js"></script>
-    <link rel="stylesheet" href="./css/libs/slick.css">
-    <!-- Подключение CSS и JavaScript Fotorama -->
-    <script src="https://cdn.jsdelivr.net/npm/jquery-zoom@1.7.21/jquery.zoom.min.js"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
-    <link rel="stylesheet" href="./css/style.min.css">
+    <link rel="stylesheet" href="./css/all.min.css">   
 </head>
 <body>
     <!--=include header.html -->
@@ -34,32 +27,54 @@
                 </nav>                 
                 <h1 class="section__title">Шкаф купе Графіт та Гамільтон</h1>       
                 <div class="mat">
-                    <div class="mat__gallery">
-                        <h2>Фото кухні</h2>
-                        <div class="fotorama" 
-                            data-nav="thumbs"
-                            data-magnify-to="1.2"          
-                            data-keyboard="true"           
-                            data-arrows="true"            
-                            data-click="true"              
-                            data-swipe="true"              
-                            data-trackpad="true"           
-                            data-allowfullscreen="native"
-                            data-width="100%"                            
-                            data-maxwidth="575"
-                            data-maxheight="330">
-                            <a href="images/sh1-large.webp" data-zoom="true">
-                                <img src="images/sh1-mini.webp" alt="Image 1">
-                            </a>
-                            <a href="images/sh2-large.webp" data-zoom="true">
-                                <img src="images/sh2-mini.webp" alt="Image 2">
-                            </a>
-                            <a href="images/sh3-large.webp" data-zoom="true">
-                                <img src="images/sh3-mini.webp" alt="Image 2">
-                            </a>
-                            <a href="images/sh4-large.webp" data-zoom="true">
-                                <img src="images/sh4-mini.webp" alt="Image 2">
-                            </a>
+                    <div class="mat__leftside">
+                        <div class="mat__gallery">
+                            <h2>Фото кухні</h2>
+                            <!-- Основной слайдер -->
+                            <div id="main-slider" class="splide">
+                                <div class="splide__track">
+                                    <ul class="splide__list">
+                                        <li class="splide__slide">
+                                            <img src="https://placehold.co/600x400" alt="Изображение 1">
+                                        </li>
+                                        <li class="splide__slide">
+                                            <img src="https://placehold.co/600x400" alt="Изображение 2">
+                                        </li>
+                                        <li class="splide__slide">
+                                            <img src="https://placehold.co/600x400" alt="Изображение 3">
+                                        </li>
+                                        <li class="splide__slide">
+                                            <img src="https://placehold.co/600x400" alt="Изображение 4">
+                                        </li>
+                                        <li class="splide__slide">
+                                            <img src="https://placehold.co/600x400" alt="Изображение 5">
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+    
+                            <!-- Слайдер с миниатюрами -->
+                            <div id="thumbnail-slider" class="splide">
+                                <div class="splide__track">
+                                    <ul class="splide__list">
+                                        <li class="splide__slide">
+                                            <img src="https://placehold.co/200x150" alt="Миниатюра 1">
+                                        </li>
+                                        <li class="splide__slide">
+                                            <img src="https://placehold.co/200x150" alt="Миниатюра 2">
+                                        </li>
+                                        <li class="splide__slide">
+                                            <img src="https://placehold.co/200x150" alt="Миниатюра 3">
+                                        </li>
+                                        <li class="splide__slide">
+                                            <img src="https://placehold.co/200x150" alt="Миниатюра 4">
+                                        </li>
+                                        <li class="splide__slide">
+                                            <img src="https://placehold.co/200x150" alt="Миниатюра 5">
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                         <div class="mat__video">
                         <h2 class="mat__video-title">Відео кухні</h2>
@@ -72,10 +87,10 @@
                             Пряма кухня з матовими дверцятами та без ручок, 
                             які б виступали за габарити фасаду. Тобто, ручок, як би, нема. 
                             Замість цього відкриття дверцят та шухляд відбувається зручним хватом за фасад. 
-                             Знизу для цього використані спеціальні профільні ручки, що йдуть по  
-                             верхньому краю дверцят, які забезпечують зручне місце для хвата. 
-                             У  верхніх секціях для цього дно шафок зроблено трохи вище за нижній 
-                             край фасаду. В цих меблях встановлено пральну машину.
+                                Знизу для цього використані спеціальні профільні ручки, що йдуть по  
+                                верхньому краю дверцят, які забезпечують зручне місце для хвата. 
+                                У  верхніх секціях для цього дно шафок зроблено трохи вище за нижній 
+                                край фасаду. В цих меблях встановлено пральну машину.
                         </p>
                         <h2 class="mat__subtitle">Матеріали</h2>
                         <ul class="mat__materials">
@@ -112,15 +127,6 @@
                         <div class="reivew__text">
                             Дуже дякуємо за чудову кухню! Все чітко, і в терміни. Всі побажання  виконали, результат перевершив наші очікування. Монтаж виконали швидко і  якісно! Дуже задоволені і вдячні👍👍👍 Рекомендую!
                         </div>
-                        <div class="review_rating">
-                            <div class="reviews__stars">
-                                <span class="reviews__star"></span>
-                                <span class="reviews__star"></span>
-                                <span class="reviews__star"></span>
-                                <span class="reviews__star"></span>
-                                <span class="reviews__star"></span>
-                            </div>                        
-                        </div>
                     </div>
                 </div>
             </div>
@@ -128,7 +134,6 @@
         <!--=include map.html --> 
     </main>    
     <!--=include footer.html --> 
-    <script src="./js/main.min.js"></script> 
-     
+    <script src="./js/all.min.js"></script> 
 </body>
 </html>
